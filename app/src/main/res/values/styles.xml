@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="teamStyle">
+        <item name="android:fontFamily">@font/orbitron_black</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@android:color/holo_red_dark</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="btnStyleTeam1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@color/team1</item>
+    </style>
+    <style name="btnStyleTeam2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@color/team2</item>
+    </style>
+</resources>

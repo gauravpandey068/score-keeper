@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/naviation"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.gaurav.scorekeeper.TitleFragment"
+        android:label="TitleFragment"
+        tools:layout="@layout/fragment_title">
+        <action
+            android:id="@+id/action_titleFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.gaurav.scorekeeper.GameFragment"
+        android:label="GameFragment"
+        tools:layout="@layout/fragment_game">
+        <action
+            android:id="@+id/action_gameFragment_to_gameOverFragment"
+            app:destination="@id/gameOverFragment" />
+        <argument
+            android:name="team1"
+            app:argType="string" />
+        <argument android:name="team2"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameOverFragment"
+        android:name="com.gaurav.scorekeeper.GameOverFragment"
+        android:label="GameOverFragment"
+        tools:layout="@layout/fragment_game_over">
+        <action
+            android:id="@+id/action_gameOverFragment_to_titleFragment"
+            app:destination="@id/titleFragment" />
+        <argument
+            android:name="team1Score"
+            app:argType="string" />
+        <argument
+            android:name="team2Score"
+            app:argType="string" />
+        <argument
+            android:name="team1Name"
+            app:argType="string" />
+        <argument
+            android:name="team2Name"
+            app:argType="string" />
+    </fragment>
+</navigation>
